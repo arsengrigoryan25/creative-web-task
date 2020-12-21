@@ -40,8 +40,6 @@ public class NotificationServiceImpl implements NotificationService {
         Optional<Notification> isPresent = repository.findById(dto.getId());
         if(isPresent.isPresent()){
             entity = isPresent.get();
-//            entity.setCommentId(dto.getCommentId());
-//            entity.setTime(dto.getTime());
             entity.setDelivered(dto.isDelivered());
             entity = repository.save(entity);
         }
@@ -61,11 +59,6 @@ public class NotificationServiceImpl implements NotificationService {
         notificationResult.setTotalPage(all.getTotalPages());
         notificationResult.setCurrentPage(page);
         return notificationResult;
-    }
-
-    @Override
-    public Long getCountDeliveredNotifications() {
-        return repository.findByDelivered(true);
     }
 
 }

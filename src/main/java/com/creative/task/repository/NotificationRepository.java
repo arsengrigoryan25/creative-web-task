@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface NotificationRepository extends JpaRepository<Notification, Long> {
-    Notification findByCommentId(Long commentId);
 
     @Query(" select count(n) from Notification n where n.delivered = :delivered")
     Long findByDelivered(@Param("delivered") boolean delivered);

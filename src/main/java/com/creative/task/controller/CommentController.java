@@ -11,8 +11,6 @@ import com.creative.task.service.CommentService;
 
 @RestController
 @RequestMapping("/comment")
-@EnableAutoConfiguration
-@ComponentScan
 public class CommentController {
 
     private final CommentService service;

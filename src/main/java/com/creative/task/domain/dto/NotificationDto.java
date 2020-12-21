@@ -10,12 +10,6 @@ public class NotificationDto {
 	private boolean delivered;
 
 	public NotificationDto() { }
-	public NotificationDto(Long id, Long commentId, Date time, boolean delivered) {
-		this.id = id;
-		this.commentId = commentId;
-		this.time = time;
-		this.delivered = delivered;
-	}
 
 	public Long getId() {
 		return id;

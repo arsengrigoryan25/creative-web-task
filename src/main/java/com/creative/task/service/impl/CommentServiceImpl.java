@@ -16,7 +16,6 @@ import com.creative.task.service.mapper.CommentMapper;
 import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 @Service
 public class CommentServiceImpl implements CommentService {
@@ -68,9 +67,6 @@ public class CommentServiceImpl implements CommentService {
     }
 
 
-    /**
-     * @param dto
-     */
     public void createNotification(CommentDto dto) {
         NotificationDto notificationDto = new NotificationDto();
         notificationDto.setCommentId(dto.getId());
